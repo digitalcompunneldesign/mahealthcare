@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Directory of Massachusetts doctors with specialties, clinics and patient stories.">
+<title>All Doctors – MA Health</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--primary:#00857A;--primary-dark:#006B62;--text:#0F172A;--text-mid:#374151;--text-light:#5B6472;--bg-page:#f3eee8;--bg-light:#F4F7FA;--surface:#FFF;--border-light:#DDE2E8;--subtle-accent:#E6F4F1;--focus:#F2B134}
+[data-theme="dark"]{--primary:#2FB3A6;--primary-dark:#8FE3DA;--text:#F3F4F6;--text-mid:#D1D5DB;--text-light:#AEB6C4;--bg-page:#0F172A;--bg-light:#1B2740;--surface:#172038;--border-light:#2B364B;--subtle-accent:#123531}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg-page);color:var(--text);font-family:'Roboto',sans-serif;font-size:1em;line-height:1.65}
+img{max-width:100%}a{color:inherit}button{font-family:inherit}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:4px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip-link{position:absolute;left:16px;top:-60px;background:var(--primary-dark);color:#fff;padding:12px 18px;border-radius:6px;font-weight:700;z-index:1000;text-decoration:none}.skip-link:focus{top:16px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.g12{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px}
+.c3{grid-column:span 3}.c4{grid-column:span 4}.c6{grid-column:span 6}.c12{grid-column:span 12}
+.topbar{background:var(--surface);border-bottom:1px solid var(--border-light)}
+.topbar-inner{max-width:1180px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo img{height:54px;display:block}
+.topbar-right{display:flex;align-items:center;gap:14px}
+.head-mail{width:60px;height:60px;border-radius:50%;background:#00857A;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.head-mail svg{width:28px;height:28px}
+.theme-toggle{width:48px;height:48px;border-radius:50%;border:none;background:#00857A;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;padding:0}
+.theme-toggle .knob svg{width:24px;height:24px;display:block}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:1px solid var(--border-light);border-radius:6px;cursor:pointer;padding:9px;min-width:44px;min-height:44px;align-items:center;justify-content:center}
+.hamburger span{width:22px;height:2px;background:var(--text);display:block}
+.navstrip{background:#fbfaf8;border-bottom:1px solid var(--border-light)}
+[data-theme="dark"] .navstrip{background:var(--bg-light)}
+.nav-menu{max-width:1180px;margin:0 auto;padding:0 20px;list-style:none;display:flex;gap:4px;flex-wrap:wrap}
+.nav-menu a{display:block;padding:14px 12px;font-size:1em;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--text-mid);text-decoration:none;border-top:3px solid transparent}
+.nav-menu a:hover,.nav-menu a.active{color:var(--primary-dark);border-top-color:var(--primary)}
+.page-head{background:var(--surface);border-bottom:1px solid var(--border-light);padding:44px 0}
+.page-head h1{font-family:'Poppins',sans-serif;font-size:clamp(30px,3.4vw,44px);margin:0 0 8px;text-transform:uppercase;letter-spacing:-.01em}
+.page-head p{margin:0;color:var(--text-light);max-width:760px}
+main{padding:50px 0 70px}
+.card{background:var(--surface);border-radius:6px;box-shadow:0 6px 24px rgba(15,23,42,.07);overflow:hidden}
+.card-body{padding:20px 22px}
+.card h2,.card h3{font-family:'Poppins',sans-serif;margin:0 0 6px;font-size:1.25em}
+.meta{color:var(--text-light);font-size:1em;margin:0 0 10px}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 4px}
+.badge{background:var(--subtle-accent);color:var(--primary-dark);font-weight:700;font-size:1em;padding:5px 12px;border-radius:999px}
+.btn{display:inline-flex;align-items:center;gap:8px;background:#00857A;color:#fff;border:none;border-radius:6px;padding:12px 20px;font-weight:700;font-size:1em;text-decoration:none;cursor:pointer;min-height:44px}
+.btn:hover{background:var(--primary-dark)}
+.btn.ghost{background:var(--surface);color:var(--text);border:1px solid var(--border-light)}
+.btn.ghost:hover{border-color:var(--primary);color:var(--primary-dark)}
+.review{border-top:1px solid var(--border-light);padding:12px 0 2px;font-size:1em}
+.review p{margin:0 0 6px;color:var(--text-mid)}
+.review .who{color:var(--text-light);font-size:1em}
+.stars{color:#B7791F;letter-spacing:2px}
+.thumb{width:100px;height:100px;border-radius:14px;object-fit:cover;flex-shrink:0;background:var(--subtle-accent)}
+.row{display:flex;gap:16px;align-items:center}
+.initials{width:100px;height:100px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:1.875em;color:#fff;flex-shrink:0}
+.center{text-align:center}
+.hidden{display:none!important}
+.contact-strip{margin-top:40px;background:var(--subtle-accent);border-radius:6px;padding:22px;display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap}
+footer{background:#efece5;border-top:1px solid rgba(15,23,42,.15);padding:22px 0 26px;color:#0F172A;margin-top:70px}
+[data-theme="dark"] footer{background:#101a30;color:#F3F4F6;border-top-color:rgba(255,255,255,.15)}
+.f-nav{max-width:1180px;margin:0 auto 16px;padding:0 20px 16px;display:flex;gap:28px;overflow-x:auto;justify-content:center;border-bottom:1px solid rgba(15,23,42,.15)}
+[data-theme="dark"] .f-nav{border-bottom-color:rgba(255,255,255,.15)}
+.f-nav a{font-size:1em;font-weight:700;text-transform:uppercase;letter-spacing:.05em;text-decoration:none;white-space:nowrap;color:inherit}
+.f-nav a:hover{color:var(--primary);text-decoration:underline}
+.footer-inner{max-width:1180px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.f-design{display:flex;align-items:center;gap:10px}.f-design img{height:26px;display:block}
+
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+@media(max-width:1024px){.c3{grid-column:span 6}.c4{grid-column:span 6}}
+@media(max-width:900px){.hamburger{display:flex}.nav-menu{display:none;flex-direction:column;padding:8px 20px 12px}.nav-menu.open{display:flex}.nav-menu a{border-top:none;border-bottom:1px solid var(--border-light)}}
+@media(max-width:768px){.c3,.c4,.c6{grid-column:span 12}.footer-inner{justify-content:center;text-align:center}}
+
+/* ── Header: hamburger + slide-in navigation drawer ── */
+.head-mail{display:none!important}
+.hamburger{display:flex!important;flex-direction:column;gap:5px;background:none!important;border:none!important;border-radius:0;box-shadow:none;padding:10px;min-width:44px;min-height:44px;align-items:center;justify-content:center;cursor:pointer}
+.hamburger span{width:26px;height:3px;border-radius:2px;background:var(--text);display:block;transform:none!important;opacity:1!important}
+.hamburger:focus-visible{outline:3px solid var(--focus,#F2B134);outline-offset:2px}
+.navstrip{position:fixed!important;top:0;right:0;bottom:0;width:min(340px,86vw);height:100vh;height:100dvh;background:var(--surface)!important;border:none;border-left:1px solid var(--border-light);box-shadow:-14px 0 40px rgba(0,0,0,.2);transform:translateX(100%);visibility:hidden;transition:transform .3s ease,visibility 0s linear .3s;z-index:1000;overflow-y:auto;display:flex;flex-direction:column}
+html.nav-open .navstrip{transform:none;visibility:visible;transition:transform .3s ease}
+.nav-overlay{position:fixed;inset:0;background:rgba(15,23,42,.45);opacity:0;visibility:hidden;transition:opacity .3s,visibility 0s linear .3s;z-index:999}
+html.nav-open .nav-overlay{opacity:1;visibility:visible;transition:opacity .3s}
+html.nav-open body{overflow:hidden}
+.nav-head{display:flex;align-items:center;justify-content:space-between;padding:14px 16px 14px 28px;border-bottom:1px solid var(--border-light)}
+.nav-head-title{font-family:'Poppins',sans-serif;font-weight:700;font-size:1em;letter-spacing:.08em;text-transform:uppercase;color:var(--text)}
+.nav-close{background:none;border:none;color:var(--text);font-size:1.875em;line-height:1;cursor:pointer;min-width:44px;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+.nav-close:focus-visible{outline:3px solid var(--focus,#F2B134);outline-offset:2px}
+.navstrip .nav-menu{display:flex!important;flex-direction:column;align-items:stretch;flex-wrap:nowrap;gap:0;margin:0;max-width:none;padding:8px 20px 28px}
+.navstrip .nav-menu li a{display:flex;align-items:center;min-height:54px;padding:14px 8px;border-top:none;border-bottom:1px solid var(--border-light)}
+.navstrip .nav-menu li a::after{display:none}
+.navstrip .nav-menu li a.active{color:var(--primary-dark);box-shadow:inset 4px 0 0 var(--primary);padding-left:16px}
+html.a11y-motion .navstrip,html.a11y-motion .nav-overlay{transition:none}
+@media (prefers-reduced-motion:reduce){.navstrip,.nav-overlay{transition:none}}
+
+/* ── No capitals; line icons with minimal 4px corners; footer current-page indicator ── */
+.f-nav a,.nav-head-title,.nav-menu a,.page-head h1{text-transform:none!important;letter-spacing:.01em!important}
+.ic{width:1.2em;height:1.2em;flex-shrink:0;display:inline-block;vertical-align:-.22em}
+.theme-toggle{border-radius:50%!important;color:#fff} .theme-toggle .knob{display:flex} .theme-toggle .knob .ic{width:24px;height:24px}
+.tile{width:64px;height:64px;border-radius:4px;background:var(--subtle-accent);color:var(--primary-dark);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.tile .ic{width:34px;height:34px}
+.f-nav a.active{color:#006B62!important;text-decoration:none;box-shadow:inset 0 -3px 0 #00857A;padding-bottom:4px}
+[data-theme="dark"] .f-nav a.active{color:#8FE3DA!important;box-shadow:inset 0 -3px 0 #2FB3A6}
+
+/* Inner-page header: looping video, no tint, same height on every inner page */
+.page-head{position:relative;isolation:isolate;overflow:hidden;height:304px;box-sizing:border-box;display:flex;align-items:flex-end;padding:0 0 36px;border-bottom:none;background:#07120d}
+.page-video{position:absolute;inset:0;z-index:-1;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.page-head .wrap{width:100%}
+.page-head h1{color:#fff!important;text-shadow:0 2px 16px rgba(0,0,0,.6);margin:0 0 2px!important;line-height:1.1}
+.page-head p{color:rgba(255,255,255,.94)!important;text-shadow:0 1px 10px rgba(0,0,0,.7);margin:0!important;line-height:1.5}
+@media (max-width:768px){.page-head{height:208px;padding-bottom:24px}}
+
+/* ── Dark theme: carbon black (neutral, no blue tint) ── */
+[data-theme="dark"]{--bg-page:#0E0E0E;--bg-light:#1A1A1A;--surface:#161616;--border-light:#2A2A2A;--subtle-accent:#10302B;--text:#F5F5F5;--text-mid:#D4D4D4;--text-light:#A3A3A3;--shadow:0 2px 10px rgba(0,0,0,.5);--shadow-lg:0 12px 32px rgba(0,0,0,.6)}
+[data-theme="dark"] body{background:#0E0E0E}
+[data-theme="dark"] footer{background:#0E0E0E;color:#F5F5F5;border-top-color:rgba(255,255,255,.12)}
+[data-theme="dark"] .f-nav{border-bottom-color:rgba(255,255,255,.12)}
+[data-theme="dark"] .f-nav a{color:#F5F5F5}
+[data-theme="dark"] .f-nav a.active{color:#8FE3DA!important;box-shadow:inset 0 -3px 0 #2FB3A6}
+[data-theme="dark"] .navstrip{background:#161616!important}
+[data-theme="dark"] .nav-overlay{background:rgba(0,0,0,.6)}
+
+/* ── Sources: always 10px, everywhere ── */
+.src{font-size:.625em!important;line-height:1.45;color:var(--text-light);margin:4px 0 0;letter-spacing:.01em}
+.src a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+.src a:hover{color:var(--primary-dark)}
+.rating{display:inline-flex;align-items:center;gap:4px;color:var(--text-mid)}
+.rating .ic{width:15px;height:15px;color:#E0A21F}
+.rating small{color:var(--text-light)}
+.rating.none{font-size:.875em;color:var(--text-light)}
+.dir-h{margin:18px 0 6px;font-size:1.0625em}
+.doc-row{padding:10px 0;border-top:1px solid var(--border-light)}
+.doc-row:last-of-type{margin-bottom:14px}
+
+/* ── Doctor photos (official source, credited) ── */
+.dav{--s:4em;position:relative;flex:0 0 var(--s);width:var(--s);height:var(--s);border-radius:50%;overflow:hidden;background:var(--subtle-accent);display:inline-flex;align-items:center;justify-content:center;box-shadow:0 0 0 2px var(--surface),0 0 0 3px var(--border-light)}
+.dav img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.dav-ini{font-family:'Poppins',sans-serif;font-weight:600;font-size:calc(var(--s) * .34);color:var(--primary-dark)}
+.dcard-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.dcard-head .dcard-name{margin:0}
+.dstatus{display:inline-block;margin:8px 0 0;padding:3px 8px;border-radius:4px;font-size:.75em;font-weight:600;background:#FFF4E0;color:#7A4B00}
+[data-theme="dark"] .dstatus{background:#3A2A0C;color:#F5C97A}
+.btn-sm-ghost{background:transparent!important;color:var(--primary-dark)!important;border:1.5px solid var(--primary)!important;text-decoration:none;display:inline-flex;align-items:center}
+.btn-sm-ghost:hover{background:var(--subtle-accent)!important}
+</style>
+<script src="js/icons.js"></script>
+<link rel="stylesheet" href="css/shared.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header>
+  <div class="topbar"><div class="topbar-inner">
+    <a href="index.html" class="logo" aria-label="MA Health – home"><span class="logo-mark" aria-hidden="true"><img src="images/logo-icon.png" alt=""></span><img class="logo-word logo-light-img" src="images/logo-word.png" alt="MA Healthcare"><img class="logo-word logo-dark-img" src="images/logo-word-dark.png" alt="MA Healthcare"></a>
+    <div class="topbar-right">
+      <nav class="top-nav" aria-label="Main"><a href="index.html">Home</a><span class="sep" aria-hidden="true">|</span><a href="doctors.html" class="active" aria-current="page">Doctors</a><span class="sep" aria-hidden="true">|</span><a href="clinics.html">Clinics</a><span class="sep" aria-hidden="true">|</span><a href="diseases.html">Diseases</a></nav><button class="find-btn" id="find-btn" type="button" aria-label="Find on this page" aria-controls="find-bar" aria-expanded="false" title="Find on this page (/)"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button><button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch theme"><span class="knob" aria-hidden="true"></span></button>
+    </div>
+  </div></div>
+  <nav class="navstrip" id="site-nav" aria-label="Primary">
+    <div class="nav-head"><span class="nav-head-title">Menu</span><button class="nav-close" id="nav-close" type="button" aria-label="Close menu">&times;</button></div>
+    <ul class="nav-menu" id="nav-menu"><li class="nav-dup"><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li class="nav-dup"><a href="clinics.html">Clinics</a></li><li class="nav-dup"><a href="diseases.html">Diseases</a></li><li class="nav-dup"><a href="doctors.html" class="active" aria-current="page">Doctors</a></li><li><a href="patient-stories.html">Patient Stories</a></li></ul></nav>
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+</header>
+<div class="page-head"><video class="page-video" id="page-video" autoplay muted loop playsinline preload="auto" poster="video/hero-poster.jpg" aria-hidden="true"></video><div class="wrap"><h1>All Doctors</h1><p>Every doctor in the MA Health directory — specialty, clinic and published ratings, each linked to its official source.</p></div></div>
+<main id="main"><div class="wrap">
+<h2 class="verified-h" style="margin:0 0 .3em">Verified booking partners</h2><p class="live-note" style="margin:0 0 1.2em">Hand-checked against each hospital’s official directory. Book these through MA Health.</p>
+<div class="g12" id="doctor-list"></div><p class="center" style="margin-top:34px"><button class="btn ghost" id="load-more" data-step="6" type="button">Load more doctors</button></p><p class="src" style="margin-top:22px">Every entry is taken from the hospital’s own public directory (linked on each card). Ratings appear only where the hospital publishes a patient-survey score; we do not show Google or third-party reviews. Details can change — confirm with the clinic before your visit.</p>
+<div class="contact-strip"><div><strong>Can't find what you need?</strong><br>Write to us and we'll point you in the right direction.</div><a class="btn" href="mailto:mahealth.us@gmail.com">Email mahealth.us@gmail.com</a></div>
+</div></main>
+<div class="footer-hero footer-solo">
+  <footer class="site-footer">
+    <nav class="f-nav" aria-label="Footer"><a href="index.html">Home</a><a href="about.html">About</a><a href="clinics.html">Clinics</a><a href="diseases.html">Diseases</a><a href="doctors.html" class="active" aria-current="page">Doctors</a><a href="patient-stories.html">Patient Stories</a></nav>
+    <div class="footer-inner">
+      <div class="f-left"><a href="index.html" class="f-logo" aria-label="MA Healthcare – home"><span class="logo-mark" aria-hidden="true"><img src="images/logo-icon.png" alt=""></span><img class="logo-word logo-light-img" src="images/logo-word.png" alt="MA Healthcare"><img class="logo-word logo-dark-img" src="images/logo-word-dark.png" alt="MA Healthcare"></a><span class="f-copy">Copyright 2026 MA Healthcare Finder. All rights reserved.</span></div>
+      <div class="f-right f-design">Website Design by <a href="https://digital.compunnel.com/" target="_blank" rel="noopener" aria-label="Compunnel Digital (opens in a new tab)"><img class="logo-light-img" src="images/compunnel-digital.svg" alt="Compunnel Digital"><img class="logo-dark-img" src="images/compunnel-digital-dark.png" alt="Compunnel Digital"></a></div>
+    </div>
+    <div class="bigtext" aria-hidden="true"><svg viewBox="0 0 1000 118" xmlns="http://www.w3.org/2000/svg"><text x="0" y="108" font-size="140" textLength="1000" lengthAdjust="spacingAndGlyphs">MA Healthcare</text></svg></div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var d=document.documentElement;
+  var SUN=ICON('sun'),MOON=ICON('moon');
+  function auto(){var h=new Date().getHours();return(h>=18||h<6)?'dark':'light'}
+  function paint(){var m=null;try{m=localStorage.getItem('ma-theme')}catch(e){}var t=m||auto();d.dataset.theme=t;
+    var b=document.getElementById('theme-toggle');if(b){b.querySelector('.knob').innerHTML=t==='dark'?MOON:SUN;b.setAttribute('aria-pressed',t==='dark');b.setAttribute('aria-label','Switch to '+(t==='dark'?'light':'dark')+' theme')}}
+  paint();
+  document.addEventListener('DOMContentLoaded',function(){
+    paint();
+    var b=document.getElementById('theme-toggle');
+    if(b)b.addEventListener('click',function(){var n=d.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('ma-theme',n)}catch(e){}paint()});
+    var lm=document.getElementById('load-more');
+    if(lm)lm.addEventListener('click',function(){
+      var hs=document.querySelectorAll('.dir-item.hidden');
+      for(var i=0;i<lm.dataset.step&&i<hs.length;i++)hs[i].classList.remove('hidden');
+      if(!document.querySelectorAll('.dir-item.hidden').length)lm.style.display='none';
+    });
+  });
+})();
+</script>
+<script src="js/catalog.js"></script>
+<script src="js/directory.js"></script>
+<script src="js/az.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/pagesearch.js"></script>
+<script src="js/inner-video.js"></script>
+</body></html>
